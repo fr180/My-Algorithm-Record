@@ -1,9 +1,6 @@
 //在BST中找到节点值等于给定值的节点。 返回以该节点为根的子树。 
 
-var TreeNode = function(val) {
-    this.val = val;
-    this.left = this.right = null;
-}
+let TreeNode = require("./base/base").TreeNode
 
 const searchBST = function(root, val) {
     if(!root) return null;

@@ -1,9 +1,7 @@
 //从头到尾打印链表
 
-function ListNode(x){
-    this.val = x;
-    this.next = null;
-}
+let ListNode = require("./base/base").ListNode
+
 
 //栈，返回数组
 function printListFromTailToHead(head) {

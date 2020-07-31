@@ -1,9 +1,7 @@
 //  输入某二叉树的前序遍历和中序遍历的结果，请重建该二叉树
 
-function TreeNode(val) {
-    this.val = val;
-    this.left = this.right = null;
-}
+let TreeNode = require("./base/base").TreeNode
+
 
 var buildTree = function(preorder, inorder) {
     if(!preorder.length || !inorder.length) return null

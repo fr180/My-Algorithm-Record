@@ -1,10 +1,3 @@
-class TreeNode {
-    constructor(val) {
-        this.val = val;
-        this.left = this.right = null;
-    }
-}
-
 /**
  * 
  * 给定一个二叉树，返回其节点值的锯齿形层次遍历。
@@ -12,6 +5,8 @@ class TreeNode {
  * @param {TreeNode} root
  * @return {number[][]}
  */
+
+let TreeNode = require("./base/base").TreeNode
 
 // 层次遍历
 const LevelOrder = function(root) {

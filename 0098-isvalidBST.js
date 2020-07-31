@@ -1,8 +1,5 @@
 //给定一个二叉树，判断其是否是一个有效的二叉搜索树。
-var TreeNode = function(val) {
-    this.val = val;
-    this.left = this.right = null;
-}
+let TreeNode = require("./base/base").TreeNode
 
 const isValidBST = function(root) {
     return isBST(root, -Infinity, Infinity)

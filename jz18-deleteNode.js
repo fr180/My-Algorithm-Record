@@ -1,8 +1,7 @@
 
-function ListNode(val) {
-    this.val = val;
-    this.next = null;
-}
+let ListNode = require("./base/base").ListNode
+
+//删除链表的节点, fa
 var deleteNode = function(head, val) {
     if(head.val === val || head.next === null) return head.next;
     let p = head, tmp = head.next
@@ -39,7 +38,3 @@ var deleteNode_II = function(head, toDelete) {
         toDelete.next = toDelete.next.next;
     }
 }
-
-let head = new ListNode(0)
-
-console.log(deleteNode(head,1))

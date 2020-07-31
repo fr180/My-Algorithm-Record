@@ -1,9 +1,4 @@
-class TreeNode {
-    constructor(val) {
-        this.val = val;
-        this.left = this.right = null;
-    }
-}
+let TreeNode = require("./base/base").TreeNode
 
 /**
  * 给定一个二叉树，返回它的中序 遍历。
