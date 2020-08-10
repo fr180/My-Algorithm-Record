@@ -4,7 +4,9 @@ let TreeNode = require("./base/base").TreeNode
  * @param {TreeNode} root
  * @return {number[]}
  */
-var levelOrder = function(root) {
+
+ //二叉树的层次遍历
+const levelOrder = function(root) {
     if (!root) return [];
     let queue = [], res = [];
     queue.push(root)
@@ -19,11 +21,12 @@ var levelOrder = function(root) {
 
 
 //从上到下按层打印二叉树，同一层的节点按从左到右的顺序打印，每一层打印到一行。
-var levelOrder_II = function(root) {
+const levelOrder_II = function(root) {
     if (!root) return [];
     let queue = [], tmp = [], res = [];
     queue.push(root);
     while(queue.length) {
+        //记录每一行的节点数
         let count = queue.length;
         while(count) {
             let node = queue.shift();
@@ -38,7 +41,8 @@ var levelOrder_II = function(root) {
     return res
 };
 
-var levelOrder_III = function(root) {
+//即奇数层按照从左到右的顺序打印，偶数层按照从右到左的顺序打印
+const levelOrder_III = function(root) {
     if (!root) return [];
     let queue = [], tmp = [], res = [], flag = 1;
     queue.push(root);
