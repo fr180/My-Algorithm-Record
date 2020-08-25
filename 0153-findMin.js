@@ -1,4 +1,5 @@
-//旋转数组的最小数字
+// 寻找旋转排序数组中的最小值
+// 不包含重复元素
 
 const minArray = function(numbers) {
     let i = 0, j = numbers.length - 1;
@@ -6,10 +7,7 @@ const minArray = function(numbers) {
         let mid = ~~((i+j)/2);
         if(numbers[mid] > numbers[j]) i = mid+1;
         else if(numbers[mid] < numbers[j]) j = mid;
-        // 处理重复元素
-        else j--;
+        // else j--;
     }
     return numbers[j];
 };
-
-console
